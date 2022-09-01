@@ -40,7 +40,7 @@ function CardItem({ item }) {
                 "Rp. "
               )}
             </h1>
-            <h1 className="line-through">
+            <h1 className="line-through text-gray-300/80">
               {formatRupiah(item.saleInfo.listPrice.amount.toString(), "Rp. ")}
             </h1>
           </div>
