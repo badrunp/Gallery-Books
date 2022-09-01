@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login {
+  background-image: url("./assets/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.register {
+  background-image: url("./assets/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  /* border: 2px solid; */
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  /* border-color: #000 transparent transparent transparent; */
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.loading-border {
+  @apply border-r-transparent border-b-transparent border-l-transparent;
+}
+
+.input-error {
+  @apply border-red-600 focus:border-red-900 focus:ring-red-600;
+}
+
+.input-success {
+  @apply border-gray-700 focus:border-blue-900 focus:ring-blue-500;
+}
+
+.login input,
+.register input {
+  @apply text-gray-300;
+}
+
+.box {
+  background: linear-gradient(90deg, #ccca 40%, #fffa, #ccca 60%) right/300%
+    100%;
+  animation: m 1s linear infinite;
+}
+@keyframes m {
+  to {
+    background-position: left;
+  }
+}
